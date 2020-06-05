@@ -44,13 +44,69 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {
         $controller = new \App\Controllers\UserController();
         $controller->runDelete();
     });
-
-    /*
-     * // {id} must be a number (\d+)
-    $r->addRoute('GET', '/user/{id:\d+}', 'get_user_handler');
-    // The /{title} suffix is optional
-    $r->addRoute('GET', '/articles/{id:\d+}[/{title}]', 'get_article_handler');
-    */
+    // --------------------------- Book -----------------------------------
+    $r->addRoute(['GET', 'POST'], '/books', function() {
+        $controller = new \App\Controllers\BooksController();
+        $controller->run();
+    });
+    $r->addRoute(['GET', 'POST'], '/books/add', function() {
+        $controller = new \App\Controllers\BooksController();
+        $controller->runAdd();
+    });
+    $r->addRoute(['GET', 'POST'], '/books/edit', function() {
+        $controller = new \App\Controllers\BooksController();
+        $controller->runEdit();
+    });
+    $r->addRoute(['GET', 'POST'], '/books/delete', function() {
+        $controller = new \App\Controllers\BooksController();
+        $controller->runDelete();
+    });
+    $r->addRoute(['GET', 'POST'], '/books/show', function() {
+        $controller = new \App\Controllers\BooksController();
+        $controller->runShow();
+    });
+    $r->addRoute(['GET', 'POST'], '/books/status', function() {
+        $controller = new \App\Controllers\BooksController();
+        $controller->runStatus();
+    });
+    // --------------------------- Orders -----------------------------------
+    $r->addRoute(['GET', 'POST'], '/orders', function() {
+        $controller = new \App\Controllers\OrdersController();
+        $controller->run();
+    });
+    // $r->addRoute(['GET', 'POST'], '/orders/add', function() {
+    //     $controller = new \App\Controllers\OrdersController();
+    //     $controller->runAdd();
+    // });
+    // $r->addRoute(['GET', 'POST'], '/orders/edit', function() {
+    //     $controller = new \App\Controllers\OrdersController();
+    //     $controller->runEdit();
+    // });
+    // $r->addRoute(['GET', 'POST'], '/orders/delete', function() {
+    //     $controller = new \App\Controllers\OrdersController();
+    //     $controller->runDelete();
+    // });
+    // --------------------------- Authorss -----------------------------------
+    $r->addRoute(['GET', 'POST'], '/authors', function() {
+        $controller = new \App\Controllers\AuthorController();
+        $controller->run();
+    });
+    $r->addRoute(['GET', 'POST'], '/authors/add', function() {
+        $controller = new \App\Controllers\AuthorController();
+        $controller->runAdd();
+    });
+    $r->addRoute(['GET', 'POST'], '/authors/edit', function() {
+        $controller = new \App\Controllers\AuthorController();
+        $controller->runEdit();
+    });
+    $r->addRoute(['GET', 'POST'], '/authors/delete', function() {
+        $controller = new \App\Controllers\AuthorController();
+        $controller->runDelete();
+    });
+    $r->addRoute(['GET'], '/authors/edit?id=', function() {
+        $controller = new \App\Controllers\AuthorController();
+        $controller->runEdit();
+    });
 });
 
 // Fetch method and URI from somewhere

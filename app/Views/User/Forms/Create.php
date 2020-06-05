@@ -26,15 +26,15 @@ class Create extends Main
                         <div class="col-lg-8 col-xl-5">
                             <div class="form-group">
                                 <label for="example-text-input-alt">User name</label>
-                                <input type="text" class="form-control form-control-alt" id="example-text-input-alt" name="example-text-input-alt" placeholder="Username ..">
+                                <input type="text" class="form-control form-control-alt" id="example-text-input-alt" name="name" placeholder="Username ..">
                             </div>
                             <div class="form-group">
                                 <label for="example-text-input-alt">E-mail</label>
-                                <input type="email" class="form-control form-control-alt" id="example-text-input-alt" name="example-text-input-alt" placeholder="Email..">
+                                <input type="email" class="form-control form-control-alt" id="example-text-input-alt" name="email" placeholder="Email..">
                             </div>
                             <div class="form-group">
                                 <label for="example-password-input-alt">Password</label>
-                                <input type="password" class="form-control form-control-alt" id="example-password-input-alt" name="example-password-input-alt" placeholder="Password..">
+                                <input type="password" class="form-control form-control-alt" id="example-password-input-alt" name="password" placeholder="Password..">
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-outline-danger float-left">Create</button>

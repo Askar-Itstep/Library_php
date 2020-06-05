@@ -7,7 +7,7 @@ use \App\Views\Main;
 
 class User extends Main
 {
-    public function content($data = [])
+    public function content($data = [], $books, $user)
     {
         $options = [
             'id' => [

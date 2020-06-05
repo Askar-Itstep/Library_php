@@ -19,9 +19,9 @@ class Db
     {
         if (is_null(self::$instanceof)) {
             $host = '127.0.0.1';
-            $db = 'lesson_composer';
-            $user = 'root';
-            $pwd = '';
+            $db = 'library';
+            $user = 'askar';
+            $pwd = '123';
             $charset = 'utf8';
 
             $dns = "mysql:host=$host;dbname=$db;charset=$charset";
